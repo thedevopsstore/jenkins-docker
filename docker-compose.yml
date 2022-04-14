@@ -2,7 +2,7 @@ version: '3'
 services:
   jenkins:
     build: ./jenkins-app
-    image: jenkins/jenkins:lts
+    #image: jenkins/jenkins:lts
     ports:
       - 8089:8080
     volumes:
