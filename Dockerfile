@@ -16,7 +16,7 @@ RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 RUN curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall
 
-RUN groupadd -g 994 docker
+#RUN groupadd -g 994 docker
 RUN usermod -aG docker jenkins
 
 ## install docker-compose
