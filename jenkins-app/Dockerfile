@@ -3,7 +3,7 @@ FROM jenkins/jenkins:lts
 user root
 
 ### update package manager and install python 3
-RUN apt-get update && apt-get install -y
+RUN apt-get update && apt-get install -y \
     sudo \
     python3-pip
 
