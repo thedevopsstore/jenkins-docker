@@ -14,6 +14,8 @@ RUN unlink /bin/sh && ln -s /bin/bash /bin/sh
 RUN usermod -aG sudo jenkins
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
+RUN curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall
+
 RUN groupadd -g 994 docker
 RUN usermod -aG docker jenkins
 
@@ -22,6 +24,6 @@ RUN curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-c
 
 user jenkins
 
-RUN curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall
+#RUN curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall
 
 
